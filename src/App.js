@@ -1,5 +1,5 @@
 import Expenses from "./components/Expense/Expenses";
-import ExpenseForm from "./components/NewExpenses/ExpenseForm";
+import NewExpense from "./components/NewExpenses/NewExpense";
 
 function App() {
   const expenses = [
@@ -8,12 +8,15 @@ function App() {
     { id: 3, title: "Pen", date: new Date(2023, 2, 10), price: 1 },
     { id: 4, title: "Laptop", date: new Date(2023, 9, 17), price: 200 },
   ];
-
+const handleAddExpense=(expenseData)=>{
+console.log("App",expenseData);
+}
   return (
     <div>
       <h2>Let's get Started</h2>
+      <NewExpense  onAddExpense={handleAddExpense}/>
       <Expenses expenses={expenses} />
-      <ExpenseForm></ExpenseForm>
+    
     </div>
   );
 }
