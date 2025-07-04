@@ -16,12 +16,13 @@ setExpenseData((prevExpenseData)=>{
   return [expense,...prevExpenseData];
 })
 }
+
   return (
     <div>
       <h2>Let's get Started</h2>
       <NewExpense  onAddExpense={handleAddExpense}/>
       <Expenses expenses={expenseData} />
-    
+      
     </div>
   );
 }
